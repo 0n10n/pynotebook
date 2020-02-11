@@ -26,6 +26,41 @@ He said "Bond, James Bond."
 
 关于格式化更多细节： https://docs.python.org/3/library/string.html#formatspec 
 
-相关源代码：
+ https://docs.python.org/zh-cn/3/library/string.html#formatspec 
 
-- [str_format.py](./str_format.py)
+相关源代码：[str_format.py](./str_format.py)
+
+- print()默认后面自动换行，如果不需要换行，可以这么做：
+
+```python
+print('a', end='')
+print('b', end='')
+```
+
+如果希望拼接空格，可以写成：
+
+```python
+print('a', end=' ')
+print('b', end=' ')
+print('c')
+```
+
+- 转义
+
+`\` 字符作为转义符；` 'What\'s your name?' `
+
+中间换行：`'This is the first line\nThis is the second line' `
+
+行末的 `\`，代表不换行，接着一行写。
+
+```python
+"This is the first sentence. \
+This is the second sentence."
+```
+
+- Raw string：字符串前名加 `r`
+
+```python
+r"Newlines are indicated by \n"
+```
+
